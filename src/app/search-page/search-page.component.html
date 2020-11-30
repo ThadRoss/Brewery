@@ -1,0 +1,55 @@
+
+<div class = "container">
+    <!-- Searchbar -->
+    <div class = "searchContainer">
+        <input type = "text" placeholder = "Brewery Name..." [(ngModel)] = "breweryInfo" class = "searchBar">
+        <input type = "button" value = "Search" (click)= "click()" class = "searchButton">
+    </div>
+    
+    
+    <!-- Checkboxes -->
+    <div class = "boxContainer">
+    
+            <mat-checkbox class="box-margin" [(ngModel)] = "visibleNames">Brewery Name</mat-checkbox>
+            <mat-checkbox class="box-margin" [(ngModel)] = "visibleAddress">Brewery Address</mat-checkbox>
+            <mat-checkbox class="box-margin" [(ngModel)] = "visibleWeb">Brewery Site</mat-checkbox>
+    
+    </div>
+</div>
+
+
+<!-- Tabs -->
+<mat-grid-list cols="3" class = "gridList">
+	<mat-grid-tile *ngIf = "visibleNames" class = "grid1">
+        <mat-card>
+            <ul>
+                <li *ngFor = "let names of nameArr" id = "brewName">
+                    {{names}}
+                </li>
+            </ul>
+        </mat-card>
+    </mat-grid-tile>
+
+	<mat-grid-tile *ngIf = "visibleAddress" class = "grid2">
+        <mat-card>
+            <ul>
+                <li *ngFor = "let streets of locationArr" id = "address">
+                    {{streets}}
+                </li>
+            </ul>
+        </mat-card>
+    </mat-grid-tile>
+
+	<mat-grid-tile *ngIf = "visibleWeb" class = "grid3">
+        <mat-card>
+            <ul>
+                <li *ngFor = "let web of webArr" id = "website">
+                    <a href = {{web}}>{{web}}</a>
+                </li>
+            </ul>
+        </mat-card>
+    </mat-grid-tile>
+
+</mat-grid-list>
+
+

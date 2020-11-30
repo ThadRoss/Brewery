@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&family=Texturina:wght@200;400&display=swap');
+
+.container{
+    background-image: url(https://lakewaycigarbar.com/wp-content/uploads/2018/07/bar-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 25%;
+}
+
+.searchContainer{
+    text-align: center;
+    transform: translateY(5em);
+    
+}
+
+.searchBar{
+    width: 15%;
+    height: 26px;
+    font-family: Texturina, sans-serif;
+    text-align: center;
+}
+
+.searchButton{
+    height: 32px;
+}
+
+.boxContainer{
+    text-align: center;
+    transform: translateY(5em);
+    color: whitesmoke;
+}
+
+.box-margin {
+    margin: 0 12px;
+}
+
+
+
+mat-grid-list{
+    height: 25vw;
+    position: relative;
+    background-image: url(https://www.millerlite.com/sites/millerlite/files/2020-04/Miller%20Lite%20Background%203.jpg);
+}
+
+.grid1{
+    position: absolute;
+    background-image: url(https://www.millerlite.com/sites/millerlite/files/2020-04/Miller%20Lite%20Background%203.jpg);
+    background-size: 2700px 1500px;
+
+    height: 12vh;
+    width: 6vw;
+
+    background-position: -10vw 50%;
+    left: 10vw;
+
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    animation: dd2 10s 2;
+    animation-delay: 4s;
+}
+
+.grid2{
+    position: absolute;
+    background-image: url(https://www.millerlite.com/sites/millerlite/files/2020-04/Miller%20Lite%20Background%203.jpg);
+    background-size: 2700px 1500px;
+    overflow: hidden;
+
+    height: 15vh;
+    width: 8vw;
+    left: 25vw;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+    background-position: -35vw 50%;
+
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    animation: dd3 10s 2;
+    animation-delay: 4s;
+}
+
+.grid3{
+    position: absolute;
+    overflow: hidden;
+    background-image: url(https://www.millerlite.com/sites/millerlite/files/2020-04/Miller%20Lite%20Background%203.jpg);
+    background-size: 2700px 1500px;
+
+    height: 25vh;
+    width: 15vw;
+    left: 60vw;
+    background-position: -70vw 50%;
+
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    animation: dd4 10s 2;
+    animation-delay: 4s;
+}
+
+mat-card{
+    font-family: Raleway, sans-serif;
+    line-height: 25px;
+}
+
+
+@keyframes dd1 {
+    0% {
+    }
+    50% {
+      width: 95vw;
+    }
+  }
+  @keyframes dd12 {
+    0% {
+    }
+    50% {
+      background-position: Calc(0vw - 40px) 50%;
+    }
+  }
+  @keyframes dd2 {
+    0% {
+    }
+    50% {
+      background-position: Calc(-10vw - 40px) 50%;
+    }
+  }
+  @keyframes dd3 {
+    0% {
+    }
+    50% {
+      background-position: Calc(-35vw - 40px) 50%;
+    }
+  }
+  @keyframes dd4 {
+    0% {
+    }
+    50% {
+      background-position: Calc(-70vw - 40px) 50%;
+    }
+  }
+  
